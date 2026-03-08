@@ -1,0 +1,285 @@
+/* Pastel Theme - Global CSS Variables */
+:root {
+    /* ===== Pastel Color Palette ===== */
+    /* Primary Pastel Colors */
+    --color-coral: #FEA3BE;
+    --color-cream: #FFDFC3;
+    --color-pink: #FBA2AB;
+    --color-beige: #F6E0D0;
+    --color-peachy: #F3B5A0;
+
+    /* Lighter variants for backgrounds */
+    --color-coral-light: #FFE9F1;
+    --color-cream-light: #FFF5EB;
+    --color-pink-light: #FFE5E9;
+    --color-beige-light: #FFF9F5;
+    --color-peachy-light: #FFE7DC;
+
+    /* ===== Backgrounds =====  */
+    /* ===== Backgrounds =====  */
+    --bg-primary: #ffffff;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+
+    /* ===== Gradients ===== */
+    --gradient-coral: linear-gradient(135deg, #FEA3BE, #FBA2AB);
+    --gradient-cream: linear-gradient(135deg, #FFDFC3, #F6E0D0);
+    --gradient-peach: linear-gradient(135deg, #F3B5A0, #FEA3BE);
+    --gradient-mixed: linear-gradient(135deg, #FBA2AB, #FFDFC3);
+    --gradient-primary: linear-gradient(135deg, #FEA3BE, #FBA2AB);
+
+    /* ===== Text Colors =====  */
+    --text-primary: #000000;
+    --text-secondary: #000000;
+    --text-muted: #000000;
+    --text-light: #000000;
+
+    /* ===== Borders ===== */
+    --border-color: #e2e8f0;
+    --border-focus: #FEA3BE;
+    --glass-border: rgba(254, 163, 190, 0.15);
+
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(254, 163, 190, 0.25);
+    --shadow-lg: 0 8px 20px rgba(254, 163, 190, 0.15);
+    --shadow-primary: 0 4px 12px rgba(254, 163, 190, 0.4);
+
+    /* ===== Status Colors ===== */
+    --color-success: #10b981;
+    --color-success-light: #d1fae5;
+    --color-warning: #f59e0b;
+    --color-warning-light: #fef3c7;
+    --color-danger: #ef4444;
+    --color-danger-light: #fee2e2;
+    --color-info: #ff8c00;
+    --color-info-light: #ffe4cc;
+
+    /* Success gradient (keeping green for attendance) */
+    --success-gradient: linear-gradient(90deg, #FEA3BE, #FBA2AB);
+    --danger-gradient: linear-gradient(90deg, #ef4444, #f87171);
+    --warning-gradient: linear-gradient(90deg, #f59e0b, #fbbf24);
+
+    /* ===== Spacing & Sizing ===== */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* ===== Transitions ===== */
+    --transition-fast: all 0.2s ease;
+    --transition-base: all 0.3s ease;
+    --transition-slow: all 0.4s ease;
+
+    /* ===== Primary/Secondary (mapped to pastel) ===== */
+    --primary: #FEA3BE;
+    --primary-light: #FFE9F1;
+    --secondary: #FBA2AB;
+    --accent: #F3B5A0;
+}
+
+/* ==== Global Component Classes ==== */
+
+/* Glass card effect */
+.glass-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-base);
+}
+
+.glass-card:hover.hover-lift {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Gradient cards */
+.gradient-card {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+/* Badges */
+.badge {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.badge-primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.badge-success {
+    background: var(--color-success-light);
+    color: var(--color-success);
+}
+
+.badge-warning {
+    background: var(--color-warning-light);
+    color: var(--color-warning);
+}
+
+.badge-danger {
+    background: var(--color-danger-light);
+    color: var(--color-danger);
+}
+
+.badge-info {
+    background: var(--color-info-light);
+    color: var(--color-info);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-base);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary);
+}
+
+.btn-outline {
+    background: white;
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary {
+    background: var(--color-beige-light);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--color-beige);
+}
+
+/* Icon buttons */
+.icon-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Text utilities */
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+/* Form elements */
+.input-field {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: var(--transition-fast);
+    background: white;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(254, 163, 190, 0.1);
+}
+
+.input-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Admin layout */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Page header */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Hover lift effect */
+.hover-lift {
+    transition: var(--transition-base);
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}

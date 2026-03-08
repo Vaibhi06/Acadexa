@@ -1,0 +1,26 @@
+﻿Ô£à Connected to database
+
+­ƒôè Total students in database: 3
+­ƒôè Active students: 3
+­ƒôè Inactive/deleted students: 0
+
+================================================================================
+STUDENTS IN DATABASE:
+================================================================================
+
+1. John Doe
+   Email: john@example.com
+   Class: 10th Grade A
+   Active: Ô£à Yes
+
+2. Jane Smith
+   Email: jane@example.com
+   Class: 10th Grade B
+   Active: Ô£à Yes
+
+3. Vaibhavi Lashkari
+   Email: vaibhavi@gmail.com
+   Class: 10th Grade A
+   Active: Ô£à Yes
+
+================================================================================

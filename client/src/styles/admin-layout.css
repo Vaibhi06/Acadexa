@@ -1,0 +1,74 @@
+/* Global Admin Layout Styles - Fixes sidebar overlap for all admin pages */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 280px;
+    transition: margin-left 0.3s ease;
+    width: calc(100% - 280px);
+}
+
+.admin-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Responsive - Remove margin on mobile when sidebar slides out */
+@media (max-width: 1024px) {
+    .admin-main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .admin-content {
+        padding-top: 6.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* New Admin Layout (used in Dashboard, Timetable, etc.) */
+.new-admin-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.new-admin-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 280px;
+    transition: margin-left 0.3s ease;
+}
+
+.new-admin-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Responsive for new layout */
+@media (max-width: 1024px) {
+    .new-admin-main {
+        margin-left: 0;
+    }
+
+    .new-admin-content {
+        padding-top: 6.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
