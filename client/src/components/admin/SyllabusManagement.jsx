@@ -19,7 +19,7 @@ const SyllabusManagement = () => {
     const [promptText, setPromptText] = useState('');
     const [isGenerating, setIsGenerating] = useState(false);
 
-    const API_URL = 'http://127.0.0.1:5000/api/syllabus';
+    const API_URL = '/api/syllabus';
 
     // subjects based on class (mock logic for now, can be improved)
     const subjects = ['Mathematics', 'Science', 'English', 'History', 'Geography', 'Physics', 'Chemistry', 'Biology'];

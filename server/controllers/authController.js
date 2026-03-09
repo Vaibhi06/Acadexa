@@ -53,6 +53,31 @@ export const login = async (req, res, next) => {
         // Find user by email
         const user = await User.findOne({ where: { email } });
 
+        // --- Demo Accounts Bypass ---
+        const DEMO_EMAILS = ['admin@acadexa.com', 'student@acadexa.com', 'faculty@acadexa.com'];
+        if (DEMO_EMAILS.includes(email)) {
+            let role = 'student';
+            if (email === 'admin@acadexa.com') role = 'admin';
+            if (email === 'faculty@acadexa.com') role = 'faculty';
+
+            const token = generateToken({
+                id: user ? user.id : `demo-${role}`,
+                email: email,
+                role: role
+            });
+
+            return successResponse(res, 200, 'Login successful (Demo Mode)', {
+                user: user ? user.toJSON() : {
+                    id: `demo-${role}`,
+                    email: email,
+                    role: role,
+                    isActive: true,
+                    name: `Demo ${role.charAt(0).toUpperCase() + role.slice(1)}`
+                },
+                token
+            });
+        }
+
         if (!user) {
             return errorResponse(res, 401, 'Invalid email or password');
         }

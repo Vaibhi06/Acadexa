@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const ClassesContext = createContext(null);
 
-const API_URL = 'http://127.0.0.1:5000/api/classes';
+const API_URL = '/api/classes';
 
 export const useClasses = () => {
     const context = useContext(ClassesContext);
